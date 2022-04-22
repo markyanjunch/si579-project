@@ -13,7 +13,7 @@ function App() {
     const [nextIndex, setNextIndex] = useState((playingIndex + 1) % songs.length);
     const [ifPlayList, setIfPlayList] = useState(false);
 
-    const { Header, Sider, Content } = Layout;
+    const { Header, Sider, Content, Footer } = Layout;
 
     useEffect(() => { setNextIndex((playingIndex + 1) % songs.length); }, [playingIndex, songs.length]);
 
@@ -29,9 +29,9 @@ function App() {
                       setIfPlayList={setIfPlayList}
                   />
               </Sider>
-              <Layout className={`${ifPlayList ? "show-playlist" : "hidden-playlist"}`}>
+              <Layout>
                   <Header>
-                      <Button onClick={() => setIfPlayList(!ifPlayList)}><UnorderedListOutlined /> Playlist </Button>
+                      <Button size="large" onClick={() => setIfPlayList(!ifPlayList)}><UnorderedListOutlined /> Playlist </Button>
                   </Header>
                   <Content>
                       <Panel
@@ -42,12 +42,11 @@ function App() {
                           setNextIndex={setNextIndex}
                       />
                   </Content>
+                  <Footer>
+                      <p>Yanjun Chen &copy; 2022, Created for: SI579 Building Interactive Applications</p>
+                  </Footer>
               </Layout>
           </Layout>
-
-
-
-
       </main>
     );
 }

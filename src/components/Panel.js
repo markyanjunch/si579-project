@@ -19,11 +19,12 @@ function Panel(props) {
 
     return (
         <div className="panel">
-            <audio src={props.songs[props.playingIndex].audio} ref={audioRef} />
+            <h1>Welcome to Yanjun's Music Player!</h1>
             <PlayingSong
                 song={props.songs[props.playingIndex]}
                 isPaused={isPaused}
             />
+            <audio src={props.songs[props.playingIndex].audio} ref={audioRef} />
             <Controls
                 isPaused={isPaused}
                 setIsPaused={setIsPaused}
