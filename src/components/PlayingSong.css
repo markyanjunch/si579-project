@@ -1,0 +1,12 @@
+.playing-song {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.playing-song img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 50%;
+}
