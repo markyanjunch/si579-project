@@ -12,7 +12,7 @@ function Panel(props) {
     useEffect(() => {isPaused ? audioRef.current.pause() : audioRef.current.play()}, [isPaused, props.playingIndex]);
 
     function changeSong(isForward) {
-        isForward
+        isForward==="forward"
             ? props.setPlayingIndex((props.playingIndex + 1) % props.songs.length)
             : props.setPlayingIndex((props.playingIndex - 1 + props.songs.length) % props.songs.length);
     }

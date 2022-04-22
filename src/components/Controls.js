@@ -1,5 +1,3 @@
-import './Controls.css';
-
 import { Button, Space } from "antd";
 import { CaretRightFilled, PauseOutlined, StepBackwardFilled, StepForwardFilled } from "@ant-design/icons";
 
@@ -12,7 +10,7 @@ function Controls(props) {
                     shape="circle"
                     size="large"
                     icon={<StepBackwardFilled />}
-                    onClick={() => props.changeSong(false)}
+                    onClick={() => props.changeSong("backward")}
                 />
                 <Button
                     type="primary"
@@ -25,7 +23,7 @@ function Controls(props) {
                     shape="circle"
                     size="large"
                     icon={<StepForwardFilled />}
-                    onClick={() => props.changeSong(true)}/>
+                    onClick={() => props.changeSong("forward")}/>
             </Space>
         </div>
     );
