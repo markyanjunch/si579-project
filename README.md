@@ -5,7 +5,7 @@
 [https://markyanjunch.github.io/si579-project/](https://markyanjunch.github.io/si579-project/)
 
 ## Run Locally
-Download or clone [https://github.com/markyanjunch/si579-project/commit/005afd2cf8d4006f6e16511a018393d68a8d6b32](https://github.com/markyanjunch/si579-project/commit/005afd2cf8d4006f6e16511a018393d68a8d6b32)
+Download or clone [https://github.com/markyanjunch/si579-project/tree/005afd2cf8d4006f6e16511a018393d68a8d6b32](https://github.com/markyanjunch/si579-project/tree/005afd2cf8d4006f6e16511a018393d68a8d6b32)
 
 `npm start`
 
