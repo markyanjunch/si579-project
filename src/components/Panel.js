@@ -22,6 +22,7 @@ function Panel(props) {
             <audio src={props.songs[props.playingIndex].audio} ref={audioRef} />
             <PlayingSong
                 song={props.songs[props.playingIndex]}
+                isPaused={isPaused}
             />
             <Controls
                 isPaused={isPaused}
@@ -30,7 +31,7 @@ function Panel(props) {
             />
             <div className="next-song">
                 <p>Next:</p>
-                <p>{props.songs[props.nextIndex].title} by {props.songs[props.nextIndex].artist}</p>
+                <p>{props.songs[props.nextIndex].title} - {props.songs[props.nextIndex].artist}</p>
             </div>
 
         </div>

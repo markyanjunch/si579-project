@@ -9,12 +9,21 @@ function App() {
     const songs = getSongs();
     const [playingIndex, setPlayingIndex] = useState(0);
     const [nextIndex, setNextIndex] = useState((playingIndex + 1) % songs.length);
-    const [isPlayList, setIsPlayList] = useState(false);
+    const [ifPlayList, setIfPlayList] = useState(false);
+    const [isPaused, setIsPaused] = useState(true);
 
     useEffect(() => { setNextIndex((playingIndex + 1) % songs.length); }, [playingIndex, songs.length]);
 
     return (
-      <main className={ `music-player ${isPlayList ? "show-playlist" : "hidden-playlist"}` }>
+      <main className={ `music-player ${ifPlayList ? "show-playlist" : "hidden-playlist"}` }>
+          <PlayList
+            songs={songs}
+            playingIndex={playingIndex}
+            setPlayingIndex={setPlayingIndex}
+            ifPlayList={ifPlayList}
+            isPaused={isPaused}
+            setIsPaused={setIsPaused}
+          />
           <Panel
               songs={songs}
               playingIndex={playingIndex}
@@ -23,7 +32,7 @@ function App() {
               setNextIndex={setNextIndex}
           />
           <PlayList
-              setIfPlayList={setIsPlayList}
+              setIfPlayList={setIfPlayList}
           />
       </main>
     );
