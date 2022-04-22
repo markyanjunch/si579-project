@@ -1,11 +1,1 @@
 @import '~antd/dist/antd.dark.css';
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.show-playlist {
-    margin-left: 30%;
-}
